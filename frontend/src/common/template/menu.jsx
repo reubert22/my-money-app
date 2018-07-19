@@ -1,6 +1,7 @@
 import React from "react";
 
-import MenuItem from "../template/menuItem";
+import MenuItem from "./menuItem";
+import MenuTree from "./menuTree";
 
 /******************************
  * Here is we'll put menu items
@@ -9,6 +10,13 @@ export default props => {
   return (
     <ul className="sidebar-menu">
       <MenuItem path="#/" label="Dashboard" icon="dashboard" />
+      <MenuTree label="Cadastro" icon="edit">
+        <MenuItem
+          path="#billingCycles"
+          label="Ciclos de Pagamentos"
+          icon="usd"
+        />
+      </MenuTree>
     </ul>
   );
 };
